@@ -1,0 +1,179 @@
+/* Import Ubuntu Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/* Global Styles */
+body, td, th, tr, p, a, strong, h2, .papertitle, .name {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    color: #3f3f3f; /* Standard text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings */
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #8d2424;
+}
+
+.name {
+    font-size: 34px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+/* Paper Title */
+.papertitle {
+    font-weight: bold;
+    color: #24678d;
+}
+
+j1 {
+    font-style: italic;
+    color: #24678d;
+        }
+
+/* Links */
+a {
+    color: #0F52BA;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover, a:focus {
+    color: #8d5024;
+}
+
+/* Icon Colors */
+.fa-brands, .fa-solid, .ai {
+    color: #8b8b8b;
+    transition: color 0.2s ease-in-out;
+}
+
+.fa-brands:hover, .fa-solid:hover, .ai:hover {
+    color: #5c5b5b;
+}
+
+/* Container */
+.container-fluid {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Image Effects */
+.one, .two {
+    width: 160px;
+    height: 160px;
+}
+
+.two {
+    position: absolute;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fade {
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Highlight */
+span.highlight {
+    background-color: #fafafa;
+}
+
+/* Colored Box */
+.colored-box {
+    color: #000;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #f5f5f5; /* Light grey background */
+}
+
+
+/* Styles for devices with a maximum width of 768px (e.g., iPhones) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        padding: 10px;   /* Add padding for better readability */
+    }
+
+    .container {
+        width: 100%;    /* Ensure containers take full width on mobile */
+        padding: 0 10px;
+    }
+
+    .papertitle {
+        font-size: 18px; /* Adjust title size for better visibility */
+    }
+
+        nav div {
+        text-align: center;
+        font-size: 10px;
+    }
+
+    nav div a {
+        display: inline-block;
+        margin: 6px 10px;
+    }
+}
+
+nav a {
+  color: #646363;
+  text-decoration: none;
+  margin: 0 20px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #24678d;
+  font-weight: bold;
+}
+nav a.active {
+  color: #646363;
+  font-weight: bold;
+}
+
+/* Mobile Navigation Toggle */
+.nav-toggle {
+  display: none;
+  font-size: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 12px;
+  right: 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Hide nav links by default */
+  nav div:not(.nav-toggle) {
+    display: none;
+    flex-direction: column;
+    align-items: center;      /* Center horizontally */
+    justify-content: center;  /* Optional: vertical alignment */
+    text-align: center;
+  }
+
+  /* Show nav links when nav is active */
+  nav.active div:not(.nav-toggle) {
+    display: flex;
+  }
+
+  /* Toggle button styling */
+  .nav-toggle {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  /* Vertical stacking of links */
+  nav a {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+}
